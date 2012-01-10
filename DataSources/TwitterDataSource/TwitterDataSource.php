@@ -22,7 +22,7 @@ class TwitterDataSource extends AbstractDataSource {
 		$data = '<response>';
 		
 		// if $result is false, we could not get a response from the api
-		if ($result == false) {
+		if ($result === false) {
 			$data .= '<row><notice>The API is down for the moment</notice></row>';
 		}
 		
@@ -38,7 +38,7 @@ class TwitterDataSource extends AbstractDataSource {
 				$data .= '<row>';
 				
 				$data .= "<fromUser>{$row['from_user']}</fromUser>";
-				$data .= "<text>{$row['text']}</text>";
+				$data .= "<tweet>{$row['text']}</tweet>";
 				
 				$data .= '</row>';
 			}

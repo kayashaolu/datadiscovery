@@ -10,6 +10,7 @@ $(document).ready(function() {
 	  $('.dataSource').each(function() {	  
 	  	  var searchFormDataSource = $(this).attr('id');
 	  	    // show loading animation
+	  	    $('#' + searchFormDataSource).html("");
 		    $("#" + searchFormDataSource + "Loading").show();
 		  		  
 		  $.post("Requests/getData.php", { 'searchFormFirstName':searchFormFirstName, 'searchFormLastName':searchFormLastName, 'searchFormDataSource':searchFormDataSource }, function(data, textStatus, jqXHR) {

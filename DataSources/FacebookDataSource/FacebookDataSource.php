@@ -22,7 +22,7 @@ class FacebookDataSource extends AbstractDataSource {
 		$data = '<response>';
 		
 		// if $result is false, we could not get a response from the api
-		if ($result == false) {
+		if ($result === false) {
 			$data .= '<row><notice>The API is down for the moment</notice></row>';
 		}
 		
