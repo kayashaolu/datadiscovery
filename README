@@ -1,0 +1,14 @@
+DataDiscovery
+
+DataDiscovery is a small application that attempts to get information from various different datasources via API's and display them in one place. It uses a mini-framework to add new datasources to the application by writing and adapter and using a config file in the DataSources folder.
+
+On adding a new datasource
+
+Create a new folder in the DataSources folder with the following naming convention: [source]DataSource (i.e. FacebookDataSource)
+Create a config.php and a [source]DataSource.php file that extends the AbstractDataSource class found in the DataSource folder. Please check DataSources/AbstractDataSource.php for more information on what is expected.
+
+On showing information from a new datasource
+
+All you have to do is add a div with class "datasource" and id with the same name as your datasource class (i.e. FacebookDataSource) to index.php and that div will be populated with the datasource's information. This is populated by script.js in the js folder, which uses getData.php in the /Requests folder.
+
+-> Written by Kay Ashaolu, 2012
